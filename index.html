@@ -5,11 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Tardis - Tu blog de espacial</title>
+    <link rel="icon" type="image/png" href="images/logo-tardis.png" />
+    <title>Tardis - Tu blog espacial</title>
     <style>
         @font-face {
             font-family: logo;
             src: url(fonts/DISTROL_.ttf);
+        }
+
+        @font-face {
+            font-family: bienvenida;
+            src: url(fonts/space.otf);
         }
 
         body {
@@ -86,7 +92,7 @@
             background-color: #002C5C;
         }
 
-        .menu li > a {
+        .menu li>a {
             color: white;
             text-decoration: none;
         }
@@ -95,30 +101,43 @@
 
         .container-bienvenida {
             width: 100%;
-            height: 500px;
+            height: 300px;
             overflow: hidden;
             position: relative;
         }
 
         .imagen-fondo {
-            background-image: url(images/imagen-bienvenida.jpg);
+            background-image: url(images/imagen-bienvenida-calidad.jpg);
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
-            width: 1000px;
-            height: 1000px;
-            animation-duration: 0.2s;
+            width: 2000px;
+            height: 2000px;
+            animation-duration: 250s;
             animation-name: giro;
             animation-iteration-count: infinite;
-            position: absolute;
-            top: -250px;
-            left: -150px;
+            position: relative;
+            top: -650px;
+            left: -170px;
+            z-index: 0;
         }
 
         @keyframes giro {
             from {
-                transform: rotate(52360deg);
+                transform: rotate(360deg);
             }
+        }
+
+        .mensaje-bienvenida {
+            z-index: 1;
+            position: relative;
+            color: yellow;
+            font-family: bienvenida;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            margin-top: 30px;
+            font-size: 1.5em;
         }
 
     </style>
@@ -140,7 +159,15 @@
             </div>
         </nav>
         <div class="container-bienvenida">
+                <div class="mensaje-bienvenida">
+                        <h1 class="texto-bienvenida">Bienvenidos a Tardis</h1>
+                        <h3 class="texto-bienvenida">El mejor blog del universo</h3>
+                </div>
             <div class="imagen-fondo"></div>
+        </div>
+        <div class="contenido">
+            <section></section>
+            <aside></aside>
         </div>
     </div>
 
