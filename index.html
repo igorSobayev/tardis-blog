@@ -1,12 +1,150 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Tardis - Tu blog de espacial</title>
+    <style>
+        @font-face {
+            font-family: logo;
+            src: url(fonts/DISTROL_.ttf);
+        }
+
+        body {
+            padding: 0;
+            margin: 0;
+            font-size: 16px;
+            background-color: azure;
+            height: 100%;
+            width: 100%;
+        }
+
+        .container {
+            height: 100vh;
+            width: 80vw;
+            margin: auto;
+            background-color: white;
+
+        }
+
+        /* Estilo para el menu */
+
+        .nav-top {
+            display: flex;
+            justify-content: space-between;
+            height: 80px;
+            width: 100%;
+            background-color: black;
+        }
+
+        .logo {
+            display: flex;
+            height: 100%;
+            line-height: 80%;
+            vertical-align: middle;
+            margin: 0 20px 0 10px;
+        }
+
+        .text-logo {
+            font-family: logo;
+            font-size: 3em;
+            letter-spacing: 4px;
+            color: yellow;
+        }
+
+        .menu-container {
+            display: flex;
+            padding: 0;
+            justify-content: flex-start;
+            width: 100%;
+        }
+
+        .menu {
+            margin: 0;
+            padding: 0;
+            display: table;
+            table-layout: fixed;
+            list-style: none;
+            text-align: center;
+            font-size: 1.4em;
+            height: 100%;
+            width: 100%;
+        }
+
+        .apartado {
+            display: table-cell;
+            line-height: 80px;
+            vertical-align: middle;
+            color: white;
+            transition: all 0.3s ease-in;
+            cursor: pointer;
+        }
+
+        .apartado:hover {
+            background-color: #002C5C;
+        }
+
+        .menu li > a {
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Estilo bienvenida */
+
+        .container-bienvenida {
+            width: 100%;
+            height: 500px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .imagen-fondo {
+            background-image: url(images/imagen-bienvenida.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            width: 1000px;
+            height: 1000px;
+            animation-duration: 0.2s;
+            animation-name: giro;
+            animation-iteration-count: infinite;
+            position: absolute;
+            top: -250px;
+            left: -150px;
+        }
+
+        @keyframes giro {
+            from {
+                transform: rotate(52360deg);
+            }
+        }
+
+    </style>
 </head>
+
 <body>
-    
+    <div class="container">
+        <nav class="nav-top">
+            <div class="logo">
+                <h1 class="text-logo">TARDIS</h1>
+            </div>
+            <div class="menu-container">
+                <ul class="menu">
+                    <li class="apartado"><a href="#">Inicio</a></li>
+                    <li class="apartado"><a href="#">Blog</a></li>
+                    <li class="apartado"><a href="#">Categorías</a></li>
+                    <li class="apartado"><a href="#">Contacto</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="container-bienvenida">
+            <div class="imagen-fondo"></div>
+        </div>
+    </div>
+
+
 </body>
+
 </html>
