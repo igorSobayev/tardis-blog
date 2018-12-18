@@ -46,11 +46,11 @@
         }
 
         .logo {
-            display: flex;
             height: 100%;
             line-height: 80%;
             vertical-align: middle;
             margin: 0 20px 0 10px;
+            flex: 1;
         }
 
         .text-logo {
@@ -61,10 +61,10 @@
         }
 
         .menu-container {
-            display: flex;
             padding: 0;
             justify-content: flex-start;
             width: 100%;
+            flex: 3;
         }
 
         .menu {
@@ -118,7 +118,7 @@
             animation-iteration-count: infinite;
             position: relative;
             top: -650px;
-            left: -170px;
+            left: -200px;
             z-index: 0;
         }
 
@@ -140,6 +140,76 @@
             font-size: 1.5em;
         }
 
+        /* Estilo para el contenido */
+
+        .contenido {
+            width: 100%;
+            background-color: blue;
+            display: flex;
+        }
+
+        section {
+            flex: 4 70%;
+            background-color: red;
+            padding: 30px;
+        }
+
+        aside {
+            flex: 1 30%;
+            background-color: green;
+            padding: 15px;
+        }
+
+        .titulo-contenido {
+            margin: 30px 0 30px 15px;
+            border-bottom: 3px solid #002C5C;
+            width: 90%;
+        }
+
+        .explorando-espacio img {
+            width: 300px;
+            height: 150px;
+        }
+
+        .articulos {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-content: flex-start;
+        }
+
+        .explorando-espacio {
+            flex-basis: 50%;
+            height: 300px;
+            margin: 15px;
+            padding: 15px;
+            overflow: hidden;
+            border: 1px solid black;
+            font-size: 1.2em;
+            text-align: center;
+        }
+
+        .texto-foto {
+            font-size: 0.8em;
+            text-align: justify;
+        }
+
+        @media(max-width: 375px) {}
+
+        @media(max-width: 768px) {}
+
+        @media(max-width: 1280px) {}
+
+        @media(max-width: 1600px) {
+            .container {
+                width: 100vw;
+                margin: 0;
+                padding: 0;
+                background-color: white;
+                box-sizing: border-box;
+
+            }
+        }
     </style>
 </head>
 
@@ -159,15 +229,62 @@
             </div>
         </nav>
         <div class="container-bienvenida">
-                <div class="mensaje-bienvenida">
-                        <h1 class="texto-bienvenida">Bienvenidos a Tardis</h1>
-                        <h3 class="texto-bienvenida">El mejor blog del universo</h3>
-                </div>
+            <div class="mensaje-bienvenida">
+                <h1 class="texto-bienvenida">Bienvenidos a Tardis</h1>
+                <h3 class="texto-bienvenida">El mejor blog del universo</h3>
+            </div>
             <div class="imagen-fondo"></div>
         </div>
+        <h1 class="titulo-contenido">Las mejores noticias espaciales a tu alcance</h1>
         <div class="contenido">
-            <section></section>
-            <aside></aside>
+            <section>
+                <div class="articulos">
+                    <article class="explorando-espacio">
+                        <img src="images/articulo1-portada.jpg">
+                        <h3>Un paseo espacial para inspeccionar el agujero de la Soyuz MS-09</h3>
+                        <p class="texto-foto">Los cosmonautas de la Expedición 57 de la ISS, Oleg Kononenko y Serguéi
+                            Prokopyev realizaron
+                            el
+                            11 de diciembre de 2018 un paseo espacial no planeado para inspeccionar el agujero hallado
+                            en
+                            el módulo orbital de la Soyuz MS-09. La actividad extravehicular, denominada EVA-45A —o
+                            VKD-45A
+                            (ВКД-45А) por sus iniciales en ruso— tuvo una duración de 7 horas y 45 minutos (según el
+                            criterio ruso de cálculo del tiempo de paseos espaciales, distinto al estadounidense), casi
+                            una
+                            hora más de lo previsto (que era de 6 horas y 33 minutos). El paseo, el 213º en la historia
+                            de
+                            la ISS, comenzó a las 15:59 UTC y finalizó a las 23:44 UTC. Los dos cosmonautas tuvieron
+                            que
+                            desplazarse desde la esclusa del módulo Pirs (SO-1) hasta la Soyuz MS-09, acoplada al
+                            módulo
+                            Rassvet, para realizar las operaciones de inspección, por lo que se vieron obligados a usar
+                            las
+                            grúas Strelá para desplazarse de un punto a otro.</p>
+                    </article>
+                    <article class="explorando-espacio">
+                        <img src="images/articulo2-portada.jpg">
+                        <h3>El sonido de los vientos marcianos de Elysium Planitia</h3>
+                        <p class="texto-foto">Sí, se parece al viento terrestre al que estamos acostumbrados. ¿Qué
+                            esperabas? Es viento, al fin y al cabo. Eso sí, el asunto tiene «truco». Y es que los
+                            sonidos del viento marciano captados por la sonda InSight de la NASA han tenido que ser
+                            procesados para que los podamos percibir. Es decir, no se ha usado un micrófono para
+                            escuchar el sonido del viento, sino otros instrumentos. Por un lado se ha empleado un
+                            sensor de presión y, por otro, el sismómetro francés SEIS. Una vez colocado en la
+                            superficie marciana, SEIS no podrá captar las vibraciones de la sonda, pero ahora se
+                            encuentra situado sobre la cubierta de la misma. Por eso SEIS ha podido detectar las
+                            vibraciones causadas por el viento sobre los grandes paneles circulares de InSight. Para
+                            que estas vibraciones captadas por el sismómetro SEIS suenen como el viento han tenido que
+                            ser modificadas haciéndolas más agudas (dos octavas por encima), así que por eso decimos
+                            que este sonido del viento marciano tiene truco. No obstante, es posible escuchar
+                            directamente las vibraciones en bruto, sin necesidad de aumentar su frecuencia, como un
+                            ruido muy grave.</p>
+                    </article>
+                </div>
+            </section>
+            <aside>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium suscipit expedita, accusamus
+                qui rem quo est distinctio magnam fugiat, alias hic dolorum quibusdam nisi quisquam sit, doloremque
+                aperiam nesciunt corrupti!</aside>
         </div>
     </div>
 
