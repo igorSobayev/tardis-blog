@@ -6,262 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" type="image/png" href="images/logo-tardis.png" />
+    <link rel="stylesheet" type="text/css" media="screen" href="style/style.css" />
     <title>Tardis - Tu blog espacial</title>
-    <style>
-        @font-face {
-            font-family: logo;
-            src: url(fonts/DISTROL_.ttf);
-        }
-
-        @font-face {
-            font-family: bienvenida;
-            src: url(fonts/space.otf);
-        }
-
-        body {
-            padding: 0;
-            margin: 0;
-            font-size: 16px;
-            background-color: azure;
-            height: 100%;
-            width: 100%;
-            overflow-x: hidden;
-        }
-
-        .container {
-            height: 100%;
-            width: 80%;
-            margin: auto;
-            background-color: white;
-
-        }
-
-        /* Estilo para el menu */
-
-        .nav-top {
-            display: flex;
-            justify-content: space-between;
-            height: 80px;
-            width: 100%;
-            background-color: black;
-        }
-
-        .logo {
-            height: 100%;
-            line-height: 80%;
-            vertical-align: middle;
-            margin: 0 20px 0 10px;
-            flex: 1;
-        }
-
-        .text-logo {
-            font-family: logo;
-            font-size: 3em;
-            letter-spacing: 4px;
-            color: yellow;
-        }
-
-        .menu-container {
-            padding: 0;
-            justify-content: flex-start;
-            width: 100%;
-            flex: 3;
-        }
-
-        .menu {
-            margin: 0;
-            padding: 0;
-            display: table;
-            table-layout: fixed;
-            list-style: none;
-            text-align: center;
-            font-size: 1.4em;
-            height: 100%;
-            width: 100%;
-        }
-
-        .apartado {
-            display: table-cell;
-            line-height: 80px;
-            vertical-align: middle;
-            color: white;
-            transition: all 0.3s ease-in;
-            cursor: pointer;
-        }
-
-        .apartado:hover {
-            background-color: #002C5C;
-        }
-
-        .menu li>a {
-            color: white;
-            text-decoration: none;
-        }
-
-        /* Estilo bienvenida */
-
-        .container-bienvenida {
-            width: 100%;
-            height: 300px;
-            overflow: hidden;
-            position: relative;
-        }
-
-        .imagen-fondo {
-            background-image: url(images/imagen-bienvenida-calidad.jpg);
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-            width: 2000px;
-            height: 2000px;
-            animation-duration: 250s;
-            animation-name: giro;
-            animation-iteration-count: infinite;
-            position: relative;
-            top: -650px;
-            left: -200px;
-            z-index: 0;
-        }
-
-        @keyframes giro {
-            from {
-                transform: rotate(360deg);
-            }
-        }
-
-        .mensaje-bienvenida {
-            z-index: 1;
-            position: relative;
-            color: yellow;
-            font-family: bienvenida;
-            display: flex;
-            flex-direction: column;
-            text-align: center;
-            margin-top: 30px;
-            font-size: 1.5em;
-        }
-
-        /* Estilo para el contenido */
-
-        .contenido {
-            width: 100%;
-            background-color: blue;
-            display: flex;
-        }
-
-        section {
-            flex-basis: 80%;
-            background-color: red;
-            padding: 30px;
-        }
-
-        aside {
-            flex-basis: 20%;
-            background-color: green;
-            padding: 15px 30px 15px 15px;
-        }
-
-        .titulo-contenido {
-            margin: 30px 0 30px 15px;
-            border-bottom: 3px solid #002C5C;
-            width: 90%;
-        }
-
-        .explorando-espacio img {
-            width: 100%;
-            height: 100%;
-        }
-
-        .articulos {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-
-        .explorando-espacio {
-            flex-basis: 55%;
-            width: 100%;
-            height: 400px;
-            margin: 15px;
-            overflow: hidden;
-            border: 1px solid black;
-            font-size: 1.2em;
-            text-align: center;
-            position: relative;
-        }
-
-        .titulo-noticia-foto {
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-            background-color: rgba(0, 0, 0, 0.575);
-            color: white;
-            height: 35%;
-            font-size: 1.4em;
-        }
-
-        .titulo-noticia-foto h3 {
-            padding-top: 15px;
-        }
-
-        .texto-foto {
-            font-size: 0.8em;
-            text-align: justify;
-        }
-
-        .noticia-flash {
-            flex-basis: 33%;
-            height: 400px;
-            margin: 15px;
-            padding: 20px;
-            overflow: hidden;
-            border: 1px solid black;
-            font-size: 1.4em;
-            text-align: center;
-        }
-
-        @media(max-width: 375px) {}
-
-        @media(max-width: 865px) {
-
-            .noticia-flash {
-                flex-basis: 80% !important;
-                background-color: green;
-                height: 300px;
-            }
-
-            aside {
-                display: none;
-            }
-
-            section {
-                flex-basis: 100%;
-            }
-
-        }
-
-        @media(max-width: 1600px) {
-            .container {
-                width: 100vw;
-                margin: 0;
-                padding: 0;
-                background-color: white;
-                box-sizing: border-box;
-
-            }
-        }
-
-        @media(max-width: 1726px) {
-            .explorando-espacio {
-                flex-basis: 85%;
-            }
-
-            .noticia-flash {
-                flex-basis: 40%;
-            }
-        }
-    </style>
 </head>
 
 <body>
@@ -304,50 +50,153 @@
                             procesados para que los podamos percibir. Es decir, no se ha usado un micrófono para
                             escuchar el sonido del viento, sino otros instrumentos. Por un lado se ha empleado un
                             sensor de presión y, por otro, el sismómetro francés SEIS. </p>
-                            <p><a href="#">Seguir leyendo</a></p>
+                        <p><a href="#">Seguir leyendo</a></p>
                     </article>
                     <article class="noticia-flash">
-                        <h3>China lanza la sonda Chang’e 4 rumbo a la cara oculta de la Luna</h3>
-                        <p class="texto-foto">Sí, se parece al viento terrestre al que estamos acostumbrados. ¿Qué
-                            esperabas? Es viento, al fin y al cabo. Eso sí, el asunto tiene «truco». Y es que los
-                            sonidos del viento marciano captados por la sonda InSight de la NASA han tenido que ser
-                            procesados para que los podamos percibir. Es decir, no se ha usado un micrófono para
-                            escuchar el sonido del viento, sino otros instrumentos. Por un lado se ha empleado un
-                            sensor de presión y, por otro, el sismómetro francés SEIS. Una vez colocado en la
-                            superficie marciana, SEIS no podrá captar las vibraciones de la sonda, pero ahora se
-                            encuentra situado sobre la cubierta de la misma. Por eso SEIS ha podido detectar las
-                            vibraciones causadas por el viento sobre los grandes paneles circulares de InSight. Para
-                            que estas vibraciones captadas por el sismómetro SEIS suenen como el viento han tenido que
-                            ser modificadas haciéndolas más agudas (dos octavas por encima), así que por eso decimos
-                            que este sonido del viento marciano tiene truco. No obstante, es posible escuchar
-                            directamente las vibraciones en bruto, sin necesidad de aumentar su frecuencia, como un
-                            ruido muy grave.</p>
+                        <h3>Bienvenida a la polvorienta Elysium Planitia: InSight está lista para hacer ciencia en
+                            Marte</h3>
+                        <p class="texto-foto">La octava sonda de la NASA que ha aterrizado con éxito en Marte está en
+                            perfecto estado. Desde que aterrizó en Elysium Planitia el 26 de noviembre de 2018 a las
+                            19:44 UTC, InSight se ha comunicado con la Tierra en varias ocasiones usando los
+                            orbitadores Mars Odyssey 2001 y Mars Reconnaisance Orbiter.</p>
+                        <p><a href="#">Seguir leyendo</a></p>
                     </article>
                     <article class="explorando-espacio">
                         <img src="images/articulo2-portada.jpg">
-                        <h3>El sonido de los vientos marcianos de Elysium Planitia</h3>
-                        <p class="texto-foto">Sí, se parece al viento terrestre al que estamos acostumbrados. ¿Qué
-                            esperabas? Es viento, al fin y al cabo. Eso sí, el asunto tiene «truco». Y es que los
-                            sonidos del viento marciano captados por la sonda InSight de la NASA han tenido que ser
-                            procesados para que los podamos percibir. Es decir, no se ha usado un micrófono para
-                            escuchar el sonido del viento, sino otros instrumentos. Por un lado se ha empleado un
-                            sensor de presión y, por otro, el sismómetro francés SEIS. Una vez colocado en la
-                            superficie marciana, SEIS no podrá captar las vibraciones de la sonda, pero ahora se
-                            encuentra situado sobre la cubierta de la misma. Por eso SEIS ha podido detectar las
-                            vibraciones causadas por el viento sobre los grandes paneles circulares de InSight. Para
-                            que estas vibraciones captadas por el sismómetro SEIS suenen como el viento han tenido que
-                            ser modificadas haciéndolas más agudas (dos octavas por encima), así que por eso decimos
-                            que este sonido del viento marciano tiene truco. No obstante, es posible escuchar
-                            directamente las vibraciones en bruto, sin necesidad de aumentar su frecuencia, como un
-                            ruido muy grave.</p>
+                        <div class="titulo-noticia-foto">
+                            <h3>El sonido de los vientos marcianos de Elysium Planitia</h3>
+                            </p>
+                        </div>
                     </article>
-
+                    <article class="explorando-espacio">
+                        <img src="images/articulo9-portada.jpg">
+                        <div class="titulo-noticia-foto">
+                            <h3>Dos décadas de la ISS</h3>
+                            </p>
+                        </div>
+                    </article>
+                    <article class="noticia-flash">
+                        <h3>InSight ha aterrizado en Marte</h3>
+                        <p class="texto-foto">El 26 de noviembre a las 19:44:52 UTC la sonda de la NASA InSight se
+                            convertía en la octava nave espacial que aterrizaba con éxito en Marte y lograba enviar
+                            datos e imágenes a la Tierra. Previamente, InSight se había separado de su etapa de crucero
+                            a las 19:31 UTC a 1.100 kilómetros de distancia del planeta rojo.</p>
+                        <p><a href="#">Seguir leyendo</a></p>
+                    </article>
+                    <article class="explorando-espacio">
+                        <img src="images/articulo10-portada.jpg">
+                        <div class="titulo-noticia-foto">
+                            <h3>30 años del Burán</h3>
+                            </p>
+                        </div>
+                    </article>
+                    <article class="noticia-flash">
+                        <h3>La despedida definitiva al cazaplanetas Kepler</h3>
+                        <p class="texto-foto">Aunque parezca mentira, hubo una época no muy lejana en la que la
+                            humanidad no sabía si existían planetas alrededor de otras estrellas. Pero eso no disuadió
+                            a algunos visionarios de proponer la construcción de un telescopio espacial para descubrir
+                            planetas mediante tránsitos, es decir, la disminución del brillo de la estrella que se
+                            produce al pasar el planeta por delante. La idea era una locura, porque esta técnica
+                            favorece la detección de planetas muy grandes que giran muy cerca de su estrella.</p>
+                        <p><a href="#">Seguir leyendo</a></p>
+                    </article>
+                    <article class="noticia-flash">
+                        <h3>Eligiendo el lugar para recoger las primeras muestras de Marte que estudiaremos en la
+                            Tierra</h3>
+                        <p class="texto-foto">El rover Mars 2020 de la NASA promete ser una misión clave para el
+                            estudio de Marte. No solo porque este gemelo de Curiosity se dedicará a buscar huellas de
+                            la posible presencia de vida en el pasado del planeta rojo, sino porque se dedicará a
+                            recoger muestras de la superficie que deberán ser recogidas y traídas a la Tierra por una
+                            misión posterior.</p>
+                        <p><a href="#">Seguir leyendo</a></p>
+                    </article>
+                    <article class="explorando-espacio">
+                        <img src="images/articulo11-portada.jpg">
+                        <div class="titulo-noticia-foto">
+                            <h3>La fría supertierra alrededor de la estrella de Barnard</h3>
+                            </p>
+                        </div>
+                    </article>
+                    <article class="explorando-espacio">
+                        <img src="images/articulo13-portada.png">
+                        <div class="titulo-noticia-foto">
+                            <h3>El ambicioso programa espacial de Lockheed-Martin</h3>
+                            </p>
+                        </div>
+                    </article>
+                    <article class="noticia-flash">
+                        <h3>Soyuz MS-10: anatomía de un accidente espacial</h3>
+                        <p class="texto-foto">El 11 de octubre de 2018 amaneció soleado en Baikonur. Es un día perfecto
+                            para ir al espacio. Dos cosmonautas comienzan la batería de rituales y preparativos para
+                            alcanzar la órbita que desde décadas caracterizan los lanzamientos de un cohete Soyuz
+                            tripulado. Alexéi Nikoláievich Ovchinin será el comandante de la misión Soyuz MS-10.</p>
+                        <p><a href="#">Seguir leyendo</a></p>
+                    </article>
                 </div>
             </section>
-            <aside>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium suscipit expedita, accusamus
-                qui rem quo est distinctio magnam fugiat, alias hic dolorum quibusdam nisi quisquam sit, doloremque
-                aperiam nesciunt corrupti!</aside>
+            <aside>
+                <div class="seccion-aside">
+                    <h3>Blogs</h3>
+                    <ul>
+                        <li><a href="https://danielmarin.naukas.com/">Daniel Marin</a></li>
+                        <li><a href="http://oceanoestelar.blogspot.com/">Oceano Estelar</a></li>
+                        <li><a href="https://milesdemillones.com/">Miles de millones</a></li>
+                        <li><a href="http://angelrls.blogalia.com/">El Lobo Rayado</a></li>
+                    </ul>
+                </div>
+                <div class="seccion-aside">
+                    <h3>Accede a nuestras redes sociales</h3>
+                    <div class="encabezado" id="redes_sociales">
+                        <a href="https://www.twitter.com"><img src="images/gorjeo.png" height="60px" width="60px"></a>
+                        <a href="https://www.instagram.com"><img src="images/instagram.png" height="60px" width="60px"></a>
+                        <a href="https://www.facebook.com"><img src="images/facebook.png" height="60px" width="60px"></a>
+                    </div>
+                </div>
+                <div class="seccion-aside">
+                    <h3>Fotos del espacio</h3>
+                    <img src="images/aside1.jpg">
+                    <img src="images/aside2.jpg">
+                    <img src="images/aside3.jpg">
+                    <img src="images/aside4.jpg">
+                </div>
+                <div class="seccion-aside">
+                    <h3>Noticias más populares</h3>
+                    <ul>
+                        <li><a href="#">El planeta Marte</a></li>
+                        <li><a href="#">Las maravillas de la luna</a></li>
+                        <li><a href="#">Los viajes espaciales</a></li>
+                        <li><a href="#">El primer hombre</a></li>
+                        <li><a href="#">El sueño interestelar</a></li>
+                        <li><a href="#">Star Wars</a></li>
+                    </ul>
+                </div>
+            </aside>
         </div>
+        <footer>
+            <div class="apartado-foot">
+                <div class="contenido-foot">
+                    <h3>Accede a nuestras redes sociales</h3>
+                    <div class="encabezado" id="redes_sociales">
+                        <a href="https://www.twitter.com"><img src="images/gorjeo.png" height="60px" width="60px"></a>
+                        <a href="https://www.instagram.com"><img src="images/instagram.png" height="60px" width="60px"></a>
+                        <a href="https://www.facebook.com"><img src="images/facebook.png" height="60px" width="60px"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="apartado-foot">
+                <div class="contenido-foot">
+                    <h3>Noticias más populares</h3>
+                    <ul>
+                        <li><a href="#">El planeta Marte</a></li>
+                        <li><a href="#">Las maravillas de la luna</a></li>
+                        <li><a href="#">Los viajes espaciales</a></li>
+                        <li><a href="#">El primer hombre</a></li>
+                        <li><a href="#">El sueño interestelar</a></li>
+                        <li><a href="#">Star Wars</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
     </div>
 
 
